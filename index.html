@@ -1,108 +1,67 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
 
-<head>
-  <meta charset="utf-8">
-  <title>Hello World!</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="shortcut icon" href="img/favicon.ico">
-</head>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Fancy letterheaded paper</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+  </head>
 
-<body>
-  <h1>HTML Rocks!</h1>
-  <p>
-    <button  onclick="helloWorld()">Prints Hello World to the Developer console</button>
-  </p>
-  <hr>
-  <form id="addForm">
-    <label for="num1">Number 1:</label>
-    <input type="number" id="num1" name="num1" required>
-    <br>
-    <label for="num2">Number 2:</label>
-    <input type="number" id="num2" name="num2" required>
-    <br>
-    <button type="submit">Add Numbers</button>
-  </form>
+  <body>
+    <article>
+      <h1>Awesome<br>Company</h1>
 
-  <label id="result">Result:</label>
+      <!-- Letter header section -->
+      <section class="title">
+        <h2>Re: Lorem Ipsum</h2>
+      </section>
 
-  <hr>
+      <!-- Letter two columns section -->
+      <section class="two-columns">
+        <div class="column">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut porttitor erat. Mauris ac nulla accumsan, commodo neque a, rhoncus est. Ut eu iaculis lacus. Morbi ac varius ex. Aenean libero enim, lobortis nec lorem eget, fringilla accumsan eros. Duis laoreet ligula in quam mollis pulvinar. Quisque ullamcorper dignissim nunc, quis gravida neque sollicitudin condimentum. Quisque condimentum accumsan rutrum. Suspendisse et tortor eget eros fermentum consequat at at massa. Vivamus varius arcu eget nulla porta, id lobortis mi dignissim.
+          </p>
+          <p>
+            Ut ullamcorper massa ac nisl fermentum, ut varius leo ullamcorper. Suspendisse ex ante, consectetur vitae eros in, ultricies euismod nunc. Vivamus at elit finibus, elementum metus ac, molestie odio. Maecenas quis rhoncus mauris. Morbi elementum at massa a euismod. Nullam pharetra velit ex, quis pulvinar lorem pellentesque nec. Praesent accumsan ante nec risus ornare, vel pulvinar enim suscipit. Cras sit amet justo lacus. Aliquam eu sagittis magna. Suspendisse potenti.
+          </p>
+          <p>
+            Aenean scelerisque augue vitae nisl hendrerit pellentesque. Sed sit amet felis vel velit semper faucibus non nec mi. Vivamus luctus at elit in commodo. Morbi eget massa ac tellus mattis sagittis. Nam porttitor ex et enim mollis tincidunt. Integer ut lectus eu velit ornare venenatis vulputate vel lectus. Curabitur eu turpis enim. Phasellus ut sapien dolor. Aenean id tristique ipsum, non posuere purus. Suspendisse nisl eros, tempor non est quis, ultricies interdum augue. In purus sem, auctor in bibendum et, facilisis vel velit. Nullam libero ligula, suscipit at erat sit amet, varius condimentum mi.
+          </p>
+        </div>
+        <div class="column">
+          <p>
+            Morbi in justo imperdiet, faucibus nunc a, lacinia justo. Phasellus dapibus at sapien id viverra. Quisque eleifend sapien at metus consequat, ut mollis dui faucibus. Suspendisse et orci ac diam lobortis porttitor rutrum eu nibh. Aliquam erat volutpat. Suspendisse ullamcorper tristique volutpat. Fusce sit amet tellus congue, ullamcorper nunc eget, pulvinar eros. Duis volutpat feugiat magna at ullamcorper. Integer volutpat, elit blandit ultricies mattis, elit leo iaculis nibh, quis vehicula arcu lorem non enim. Aenean in urna convallis, rhoncus nulla eget, fringilla odio. Suspendisse potenti. Duis porta non urna sed bibendum. Nullam vel sollicitudin magna.
+          </p>
+          <p>
+            In fermentum diam nec leo tincidunt, a mattis lorem luctus. Donec vehicula sapien sed facilisis semper. Praesent vestibulum ullamcorper ante, ac gravida quam commodo et. Maecenas vel nisl convallis, rutrum leo in, suscipit sem. Duis non risus mollis, fringilla erat in, ultrices ligula. Proin sollicitudin neque ullamcorper, mattis nisi et, pulvinar quam. Sed faucibus commodo tellus, ut viverra leo commodo sed. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer lobortis lorem non sem egestas suscipit. Suspendisse sed quam ac leo pharetra posuere.
+          </p>
+          <!-- The radio button part - probably didn't need to use a form, but oh well -->
+          <form class="radio-form" id="radio-form">
+            <div>
+              <label for="lorem" id="lorem-text">Lorem is better than Ipsum</label>
+              <input type="radio" name="radio" value="lorem" id="lorem" checked><br>
+            </div>
+            <div>
+              <label for="ipsum" id="ipsum-text">Ipsum is better than Lorem</label>
+              <input type="radio" name="radio" value="ipsum" id="ipsum"><br>
+            </div>
+            <button id="alert-button">Alert Me!</button>
+          </form>
+        </div>
+      </section>
 
-  <button id="jokeButton">Get a Random Joke</button>
-  <p id="joke"></p>
+      <address>
+        <p>The Awesome Company</p>
+        <p>102-112 Frail Bend Bridge<br>
+        The Dwindlings<br>
+        Little Hornet<br>
+        HX3 9ZQ<br>
+        UK</p>
+      </address>
+    </article>
 
-  <hr>
-  <button id="jokeButtonTable">Get a  5 Random Jokes</button>
-  <table id="jokeTable"></table>
-
-  <script type="module" script="js/main.js">
-    import {helloWorld, add, fetchRandomJoke, fetch5RandomJokes} from './js/main.js';
-
-    // This shows how to assign a function to the window object
-    // so that it can be called from the browser console
-    window.helloWorld = helloWorld;
-
-    // This shows how to add an event listener to a button in the HTML
-    // and call a function when the button is clicked
-    const form = document.getElementById('addForm');
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const num1 = parseFloat(document.getElementById('num1').value);
-      const num2 = parseFloat(document.getElementById('num2').value);
-      try{
-        const result = add(num1, num2);
-        document.getElementById('result').textContent = `Result: ${result}`;
-      }catch(e){
-        console.error(e);
-        document.getElementById('result').textContent = `Error: ${e.message}`;
-      }
-
-    });
-
-    // this shows how to add an event listener to a button in the HTML
-    // that calls a function that fetches a random joke from an API
-    // and displays it on the page
-    const jokebtn = document.getElementById('jokeButton');
-    const jokeresult = document.getElementById('joke');
-    jokebtn.addEventListener('click', async () => {
-      try {
-        jokeresult.textContent = 'Loading...';
-        const joke = await fetchRandomJoke();
-        document.getElementById('joke').textContent = joke;
-      } catch (e) {
-        console.error(e);
-        document.getElementById('joke').textContent = `Error: ${e.message}`;
-      }
-    });
-
-    // this shows how to add an event listener to a button in the HTML
-    // that calls a function that fetches 5 random jokes from an API
-    // and displays them in a table on the page
-    const jokeTableBtn = document.getElementById('jokeButtonTable');
-    const jokeTable = document.getElementById('jokeTable');
-    jokeTableBtn.addEventListener('click', async () => {
-      try {
-        jokeTable.textContent = 'Loading...';
-        const joke = await fetch5RandomJokes();
-        jokeTable.innerHTML = `
-              <thead>
-              <tr>
-                <th>Joke</th>
-              </tr>
-              </thead>
-              <tbody>
-              ${joke.map(j => `<tr><td>${j}</td></tr>`).join('')}
-              </tbody>
-            `;
-      } catch (e) {
-        console.error(e);
-        document.getElementById('joke').textContent = `Error: ${e.message}`;
-      }
-    });
-  </script>
-
-</body>
-
+    <script src="js/form.js"></script>
+  </body>
 </html>
