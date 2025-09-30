@@ -1,8 +1,8 @@
-# web-dev-starter
+# lab-6-letterhead
 
-This is a starter project for web development with no frameworks and minimal
-dependencies. It is intended to be a starting point for web development projects
-that are written in plain HTML, CSS, and JavaScript.
+This site creates a letterhead with some filler text using
+HTML and CSS. Some JavaScript has been added for a radio
+button form at the end.
 
 ## Getting Started
 
